@@ -120,6 +120,53 @@
             color: var(--text-white);
         }
 
+        /* Стили для раскрывающихся списков */
+        details {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        details:hover {
+            border-color: var(--accent);
+        }
+
+        details[open] {
+            border-color: var(--border-color);
+        }
+
+        summary {
+            color: var(--text-white);
+            font-size: 1.05rem;
+            cursor: pointer;
+            outline: none;
+            user-select: none;
+        }
+
+        summary b {
+            color: var(--text-white);
+        }
+
+        summary i {
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-left: 5px;
+        }
+
+        .details-content {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #21262d;
+            font-size: 0.95rem;
+        }
+
+        .details-content strong {
+            color: var(--text-white);
+        }
+
         footer {
             text-align: center;
             margin-top: 40px;
@@ -164,6 +211,33 @@
                 <li>Спрашиваю <strong>"полируем?"</strong>, дорабатываю детали (Photoshop + ИИ).</li>
                 <li>Сдаю готовый результат.</li>
             </ol>
+        </div>
+
+        <!-- Зоны ответственности -->
+        <div class="card" style="margin-top: 40px; border-style: dashed;">
+            <h2>Зоны ответственности</h2>
+            <p style="margin-bottom: 20px; font-size: 0.95rem;">Реальные роли и обязанности:</p>
+
+            <details>
+                <summary><b>Заголовок [кликабельный текст]</b></summary>
+                <div class="details-content">
+                    Это задача копирайтера, сценариста или самого продюсера YouTube-канала. <strong>Это чистый маркетинг и психология, а не дизайн.</strong>
+                </div>
+            </details>
+
+            <details>
+                <summary><b>Идея и композиция</b></summary>
+                <div class="details-content">
+                    Это работа креатора, арт-директора или YouTube-продюсера. Они анализируют конкурентов, целевую аудиторию и составляют для дизайнера подробное ТЗ.
+                </div>
+            </details>
+
+            <details>
+                <summary><b>Создание обложки</b></summary>
+                <div class="details-content">
+                    А вот это уже <strong>моя</strong> роль - дизайнера. Беру готовые идею, текст, исходники и делаю картинку сочной и читаемой.
+                </div>
+            </details>
         </div>
 
         <footer>
